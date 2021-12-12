@@ -1,9 +1,28 @@
-const baseUrl = "https://api.fbi.gov/@wanted"
 
-fetch(baseUrl)
+
+
+
+
+
+const baseUrl = "https://api.fbi.gov/@wanted"
+function fetchApi() {
+    fetch(baseUrl)
 .then(res => res.json())
 .then(res => console.log(res))
+}
 
 
-const card = document.createElement("div")
-card.style = "blue"
+// const contactForm = document.createElement("form"); 
+// contactForm.setAttribute("type", "text");
+// document.body.appendChild(contactForm);
+
+
+
+
+// function allEventListeners(action) {
+//     contactForm.addEventListener("submit", action)
+// }
+
+
+
+
