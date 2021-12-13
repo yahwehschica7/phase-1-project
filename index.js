@@ -1,17 +1,6 @@
+const contactForm = document.createElement("form")
+contactForm.setAttribute
 
-
-
-// need a nav bar, sidebars, footers
-
-
-
-// const h1 = document.querySelector("h1")
-// const h2 = document.createElement("h2")
-// h1.append("h2")
-// h2.innerText = "The Truth shall set you free"
-// const p = document.createElement("p")
-// p.innerText = "The truth shall set you free."
-// h1.appendChild("p")
 
 const baseUrl = "https://api.fbi.gov/@wanted"
 function fetchApi() {
@@ -23,9 +12,18 @@ function fetchApi() {
 function myCat() {
     const img = new Image ()
     img.src = "https://img-9gag-fun.9cache.com/photo/aD1n89B_460s.jpg"
+    img.width ="250"
+    img.height = "300"
     document.getElementById("body").appendChild(img);
-    
+    const input = document.createElement("input")
+    const 
+
+    // const catDiv = document.createElement("div")
+
+    // catDiv.innerHTML = "<p>McCormick Investigations is looking for the owner of this cat. Be advised: She bites.</p>"
+    // img.appendChild(catDiv)
 }
+myCat()
 // const contactForm = document.createElement("form"); 
 // contactForm.setAttribute("type", "text");
 // document.body.appendChild(contactForm);
