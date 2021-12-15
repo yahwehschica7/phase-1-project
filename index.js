@@ -1,14 +1,11 @@
-
-let submitButton = document.getElementById("submit")
-submitButton.addEventListener("submit", thankYou())
-
+const contactButton = document.getElementById("button")
+const submitButton = document.getElementById("submit")
 const baseUrl = "https://api.fbi.gov/@wanted"
-
 
 const fetchApi = () => {
 fetch(baseUrl)
 .then(res => res.json())
-.then(res => console.log(res))
+.then(data => console.log(data.items))
 }
 
 const myCat = () => {
@@ -25,23 +22,16 @@ function thankYou() {
 
 
 
+function allEventListeners() {
+    submitButton.addEventListener("submit", thankYou())
+}
+    
+    
+
 
 myCat()
 fetchApi()
-
-// const contactForm = document.createElement("form"); 
-// contactForm.setAttribute("type", "text");
-// document.body.appendChild(contactForm);
-
-
-
-
-// function allEventListeners(action) {
-//     contactForm.addEventListener("submit", action)
-// }
-
-// const contactForm = document.createElement("form")
-// contactForm.setAttribute
+allEventListeners()
 
 
 
