@@ -1,4 +1,6 @@
 
+const submitButton = document.getElementById("#submit")
+console.log(submitButton)
 
 const baseUrl = "https://api.fbi.gov/@wanted"
 
