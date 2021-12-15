@@ -1,7 +1,7 @@
 const contactButton = document.getElementById("button")
 const submitButton = document.getElementById("submit")
 const baseUrl = "https://api.fbi.gov/@wanted"
-document.querySelector("#api").innerHTML = "<h5>Most Wanted</h5>"
+document.querySelector("#api").innerHTML = "<p>Lost Cat. Please contact if owner is known. Warning: She bites.</p>"
 
 
 const fetchApi = () => {
@@ -27,7 +27,7 @@ const myCat = () => {
 }
 
 function thankYou() {
-    console.log("Thank you for choosing McCormick Investigations. We will contact you within 24 hours.")
+    alert("Thank you for choosing McCormick Investigations. We will contact you within 24 hours.")
 }
 
 // const renderWanted = () => {
