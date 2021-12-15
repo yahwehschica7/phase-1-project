@@ -1,11 +1,9 @@
-const mainDiv = () => document.getElementById("main")
+
 
 const baseUrl = "https://api.fbi.gov/@wanted"
-const homePageTemplate = () => {
-    return `<h3>In Search of Truth</h3>`
-}
 
-function fetchApi() {
+
+const fetchApi = () => {
 fetch(baseUrl)
 .then(res => res.json())
 .then(res => console.log(res))
@@ -16,9 +14,12 @@ const myCat = () => {
     img.src = "https://img-9gag-fun.9cache.com/photo/aD1n89B_460s.jpg"
     img.width ="250"
     img.height = "300"
-    document.getElementById("main").appendChild(img);
-  
+    document.getElementById("main").appendChild(img); 
 }
+
+
+
+
 
 
 myCat()
