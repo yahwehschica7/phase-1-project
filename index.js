@@ -1,6 +1,6 @@
 
-const submitButton = document.getElementById("#submit")
-console.log(submitButton)
+let submitButton = document.getElementById("submit")
+submitButton.addEventListener("submit", thankYou())
 
 const baseUrl = "https://api.fbi.gov/@wanted"
 
@@ -19,7 +19,9 @@ const myCat = () => {
     document.getElementById("main").appendChild(img); 
 }
 
-
+function thankYou() {
+    console.log("Thank you for choosing McCormick Investigations. We will contact you within 24 hours.")
+}
 
 
 
