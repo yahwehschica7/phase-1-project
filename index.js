@@ -28,6 +28,7 @@ const myCat = () => {
 
 function thankYou() {
     alert("Thank you for choosing McCormick Investigations. We will contact you within 24 hours.")
+    thankYou.reset()
 }
 
 // const renderWanted = () => {
