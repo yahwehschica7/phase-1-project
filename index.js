@@ -5,21 +5,32 @@ const baseUrl = "https://api.fbi.gov/@wanted"
  
 
 window.addEventListener("DOMContentLoaded", (e) => {
-    e.preventDefault()
+    submitButton.addEventListener("click", thankYou)
+    fetchApi()
+    myCat()
 })
 
 const fetchApi = () => {
 fetch(baseUrl)
 .then(res => res.json())
 .then(data => {
-    const renderMostWanted = data.items.map(wanted => {
-    return `<p>Most Wanted: ${wanted.images}</p>`
+    
+    data.items.forEach(wanted => {
+      renderImage(wanted)
 })
-    console.log(renderMostWanted)
+ 
    
 })
 }  
-       
+ function renderImage(item) {
+    const img = new Image ()
+    img.src = item.images[0]["large"]
+    img.width ="250"
+    img.height = "300"
+    mainDiv.appendChild(img); 
+    // for each image or map, loop over and render to dom. create image tag for each loop.
+    // drill down to 
+ }   
   
 // need to render api images to dom. Need help.
  
@@ -37,10 +48,7 @@ const myCat = () => {
         alert("Thank you for choosing McCormick Investigations. We will contact you within 24 hours.")
     }
 
-    submitButton.addEventListener("click", thankYou())
-
-    fetchApi()
-    myCat()
+    
    
     // only want submit form to load when button is clicked. Need help.
 
