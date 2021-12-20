@@ -1,50 +1,46 @@
-const contactButton = document.getElementById("button")
-const submitButton = document.getElementById("submit")
-const baseUrl = "https://api.fbi.gov/@wanted"
-document.querySelector("#api").innerHTML = "<p>Lost Cat. Please contact if owner is known. Warning: She bites.</p>"
 
+const submitButton = document.getElementById("submit")
+const mainDiv = document.getElementById("main")
+const baseUrl = "https://api.fbi.gov/@wanted"
+ 
+
+window.addEventListener("DOMContentLoaded", (e) => {
+    e.preventDefault()
+})
 
 const fetchApi = () => {
 fetch(baseUrl)
 .then(res => res.json())
-// .then(data => console.log(data.items.map(renderWanted)))
-.then(data => console.log(data.items))
-    // const renderToDom = data.items.images.map(image => {
-    //     return `<p>Face: ${image.images}</p>`})
-    //     console.log(renderToDom)
-    }
-
-    
-// .catch(error => console.log(error))
-
-
+.then(data => {
+    const renderMostWanted = data.items.map(wanted => {
+    return `<p>Most Wanted: ${wanted.images}</p>`
+})
+    console.log(renderMostWanted)
+   
+})
+}  
+       
+  
+// need to render api images to dom. Need help.
+ 
 const myCat = () => {
     const img = new Image ()
     img.src = "https://img-9gag-fun.9cache.com/photo/aD1n89B_460s.jpg"
     img.width ="250"
     img.height = "300"
-    document.getElementById("main").appendChild(img); 
-}
-
-function thankYou() {
-    alert("Thank you for choosing McCormick Investigations. We will contact you within 24 hours.")
-    thankYou.reset()
-}
-
-// const renderWanted = () => {
-
-// }
-
-function allEventListeners() {
-    submitButton.addEventListener("submit", thankYou())
-}
+    mainDiv.appendChild(img); 
     
-    
+    document.querySelector("#api").innerHTML = "<p>Lost Cat. Please contact if owner is known. Warning: She bites.</p>"
+}
 
+    function thankYou() {
+        alert("Thank you for choosing McCormick Investigations. We will contact you within 24 hours.")
+    }
 
-myCat()
-fetchApi()
-allEventListeners()
+    submitButton.addEventListener("click", thankYou())
 
-
+    fetchApi()
+    myCat()
+   
+    // only want submit form to load when button is clicked. Need help.
 
