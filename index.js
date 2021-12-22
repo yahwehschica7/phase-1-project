@@ -2,6 +2,10 @@
 const submitButton = document.getElementById("submit")
 const mainDiv = document.getElementById("main")
 const baseUrl = "https://api.fbi.gov/@wanted"
+const previousButton = document.getElementById("previous")
+const nextButton = document.getElementById("next")
+let criminals = []
+let index = 0
  
 
 window.addEventListener("DOMContentLoaded", (e) => {
@@ -14,17 +18,20 @@ const fetchApi = () => {
 fetch(baseUrl)
 .then(res => res.json())
 .then(data => {
-    
-    data.items.forEach(wanted => {
-      renderImage(wanted)
-})
- 
+    criminals = data.items
+    criminals.forEach(data => {
+        renderImage(data)
+    }) 
    
 })
-}  
- function renderImage(item) {
+}
+
+       
+
+ const renderImage = index => {
+    
     const img = new Image ()
-    img.src = item.images[0]["large"]
+    img.src = index.images[0]["large"]
     img.width ="250"
     img.height = "300"
     mainDiv.appendChild(img); 
@@ -46,7 +53,17 @@ const myCat = () => {
         alert("Thank you for choosing McCormick Investigations. We will contact you within 24 hours.")
     }
 
-    
+    const clickNextButton = () => {
+        nextButton.addEventListener("click", () => {
+            renderImage(++index)
+        })
+    }
+
+    const clickPreviousButton = () => {
+        previousButton.addEventListener("click", () => {
+            renderImage(--index)
+        })
+    }
    
     
 
