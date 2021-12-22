@@ -28,12 +28,9 @@ fetch(baseUrl)
     img.width ="250"
     img.height = "300"
     mainDiv.appendChild(img); 
-    // for each image or map, loop over and render to dom. create image tag for each loop.
-    // drill down to 
  }   
   
-// need to render api images to dom. Need help.
- 
+
 const myCat = () => {
     const img = new Image ()
     img.src = "https://img-9gag-fun.9cache.com/photo/aD1n89B_460s.jpg"
@@ -41,7 +38,8 @@ const myCat = () => {
     img.height = "300"
     mainDiv.appendChild(img); 
     
-    document.querySelector("#api").innerHTML = "<p>Lost Cat. Please contact if owner is known. Warning: She bites.</p>"
+    document.querySelector("#api").innerHTML = 
+        "<p>Lost Cat. Please contact<br> if owner is known.<br> Warning: She bites.</p>"
 }
 
     function thankYou() {
@@ -50,5 +48,5 @@ const myCat = () => {
 
     
    
-    // only want submit form to load when button is clicked. Need help.
+    
 
