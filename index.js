@@ -4,6 +4,7 @@ const mainDiv = document.getElementById("main")
 const baseUrl = "https://api.fbi.gov/@wanted"
 const previousButton = document.getElementById("previous")
 const nextButton = document.getElementById("next")
+const imgContainer = document.getElementById("container")
 let criminals = []
 let index = 0
  
@@ -26,27 +27,28 @@ fetch(baseUrl)
 })
 }
 
-       
+    // need help with render image so that only one image appears   
 
  const renderImage = index => {
-    
     const img = new Image ()
     img.src = index.images[0]["large"]
     img.width ="250"
     img.height = "300"
-    mainDiv.appendChild(img); 
+    imgContainer.appendChild(img); 
  }   
   
 
 const myCat = () => {
+    const imgCaption = document.createElement("p")
+
     const img = new Image ()
     img.src = "https://img-9gag-fun.9cache.com/photo/aD1n89B_460s.jpg"
     img.width ="250"
     img.height = "300"
     mainDiv.appendChild(img); 
     
-    document.querySelector("#api").innerHTML = 
-        "<p>Lost Cat. Please contact<br> if owner is known.<br> Warning: She bites.</p>"
+    document.querySelector("#catnews").innerHTML = 
+        "<p>Lost Cat. Please contact<br> if you have info.<br> Warning: She bites.</p>"
 }
 
     function thankYou() {
