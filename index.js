@@ -30,10 +30,12 @@ fetch(baseUrl)
     // need help with render image so that only one image appears   
 
  const renderImage = index => {
+    
     const img = new Image ()
     img.src = index.images[0]["large"]
     img.width ="250"
     img.height = "300"
+     
     imgContainer.appendChild(img); 
  }   
   
