@@ -5,8 +5,9 @@ const baseUrl = "https://api.fbi.gov/@wanted"
 const previousButton = document.getElementById("previous")
 const nextButton = document.getElementById("next")
 const imgContainer = document.getElementById("container")
-let criminals = []
-let index = 0
+let imgCaption = document.querySelector("#container")
+// let criminals = []
+// let index = 0
  
 
 window.addEventListener("DOMContentLoaded", (e) => {
@@ -30,14 +31,15 @@ fetch(baseUrl)
     // need help with render image so that only one image appears   
 
  const renderImage = index => {
+    // imgCaption.innerHTML = " "   
     const img = new Image ()
-    img.src = index.images[0]["large"]
+    img.src = index.images[1]["large"]
     img.width ="250"
     img.height = "300"
-    document.querySelector("#container").innerHTML = "<p>Most Wanted</p>" 
+    imgCaption.innerHTML = "<p>Most Wanted</p>" 
     imgContainer.appendChild(img); 
  }   
-  
+//  renderImage needs to loop through array somehow 
 
 const myCat = () => {
     const img = new Image ()
@@ -55,14 +57,14 @@ const myCat = () => {
 
     const clickNextButton = () => {
         nextButton.addEventListener("click", () => {
-            renderImage(++index)
+            renderImage(++imgCaption)
             //need help making buttons work
         })
     }
 
     const clickPreviousButton = () => {
         previousButton.addEventListener("click", () => {
-            renderImage(--index)
+            renderImage(--imgCaption)
         })
     }
    
