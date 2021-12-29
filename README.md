@@ -1,6 +1,6 @@
-# Foobar
+# McCormick Investigations
 
-Foobar is a Python library for dealing with word pluralization.
+McCormick Investigations is a single page application (SPA) created to showcase my fictional character's private detective business.
 
 ## Installation
 
