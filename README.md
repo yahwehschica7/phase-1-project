@@ -1,6 +1,6 @@
-# McCormick Investigations
+# McCormick Investigations Webpage
 
-McCormick Investigations is a single page application (SPA) created to showcase my fictional character's private detective business.
+McCormick Investigations is a single page application (SPA) created to showcase my fictional character's private detective business. The page includes a contact form, a picture of the lost cat Rachel McCormick is taking care of, and images of the FBI's Most Wanted that a page visitor can look at using next and previous buttons. 
 
 ## Links
 
