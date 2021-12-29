@@ -2,13 +2,11 @@
 
 McCormick Investigations is a single page application (SPA) created to showcase my fictional character's private detective business.
 
-## Installation
+## Links
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
+Used CSS from materialize (https://materializecss.com/) to create the color and style of the page. 
+The picture of the cat is pulled from https://img-9gag-fun.9cache.com/photo/aD1n89B_460s.jpg
+The images of wanted criminals is pulled from a public API located at https://api.fbi.gov/@wanted
 
 ## Usage
 
