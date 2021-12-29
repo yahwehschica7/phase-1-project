@@ -8,13 +8,11 @@ Used CSS from materialize (https://materializecss.com/) to create the color and 
 The picture of the cat is pulled from https://img-9gag-fun.9cache.com/photo/aD1n89B_460s.jpg. This link is located in the js file. 
 The images of wanted criminals is pulled from a public API located at https://api.fbi.gov/@wanted. The api link is found in the js file.
 
-## Code Used
+## Required Code
 
 HTML, CSS, and JavaScript
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Set Up
+1. In the index.html file, create html to hold a nav bar for the title of the page, a contact form with a submit button to contact the fictional character's business, and several divs below the form to hold innerHTML, images, and the fetched api. 
 
-Please make sure to update tests as appropriate.
-
-## License
+2. 
