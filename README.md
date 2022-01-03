@@ -13,7 +13,7 @@ The images of wanted criminals is pulled from a public API located at https://ap
 HTML, CSS, and JavaScript
 The project includes an index.html file that loads an index.js file. The CSS is pulled from materializecss.com 
 
-## Set Up
+## Functionality
 1. In the index.html file, create html to hold a nav bar for the title of the page, a contact form with a submit button to contact the fictional character's business, and several divs below the form to hold innerHTML, images, and the fetched api. 
 
-2. 
+2. In the index.js file, there are several constants used to place the form, the button, and the images on to the DOM. The functions create interactivity. There are four event listeners. One is DOM Content Loaded. The other two are the previous and next buttons, which flip through the images of the FBI's top twenty most wanted. The fourth event listener is connected to the form content, and calls the thankYou function when a user clicks the submit button on the contact form.
