@@ -11,6 +11,7 @@ The images of wanted criminals is pulled from a public API located at https://ap
 ## Required Code
 
 HTML, CSS, and JavaScript
+The project includes an index.html file that loads an index.js file. The CSS is pulled from materializecss.com 
 
 ## Set Up
 1. In the index.html file, create html to hold a nav bar for the title of the page, a contact form with a submit button to contact the fictional character's business, and several divs below the form to hold innerHTML, images, and the fetched api. 
