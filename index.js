@@ -32,7 +32,7 @@ const renderImage = index => {
    img.src = criminals[index].images[0].large
    img.width ="250"
    img.height = "300"
-   imgContainer.innerHTML = "<p>Most Wanted</p>" 
+   imgContainer.innerHTML = "<p>Have you seen this person? Contact me!</p>" 
    imgContainer.appendChild(img); 
  }      
     
